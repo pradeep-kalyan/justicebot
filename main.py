@@ -7,7 +7,6 @@ llm = ChatGroq(
     max_retries=2,
     api_key="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"
 )
-print(data.content)
 from langchain_community.document_loaders import WebBaseLoader
 loader = WebBaseLoader("https://doj.gov.in/")
 output=loader.load().pop().page_content
