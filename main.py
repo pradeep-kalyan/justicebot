@@ -5,7 +5,7 @@ from langchain_core.prompts import PromptTemplate
 
 # Securely set environment variables
 os.environ['USER_AGENT'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
-os.environ['GROQ_API_KEY'] = 'your_api_key_here'  # Replace with your actual API key
+os.environ['GROQ_API_KEY'] = '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'  # Replace with your actual API key
 
 def load_web_content(url):
     """Load content from a given URL using WebBaseLoader."""
