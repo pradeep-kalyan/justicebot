@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOJ Information Assistant</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+      .chat-container {
+        width: 80%;
+        margin: 40px auto;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .chat-header {
+        background-color: #337ab7;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        color: #fff;
+      }
+      .chat-header h2 {
+        margin: 0;
+      }
+      .chat-messages {
+        padding: 20px;
+      }
+      .chat-message {
+        margin-bottom: 20px;
+      }
+      .chat-message .user {
+        font-weight: bold;
+        color: #337ab7;
+      }
+      .chat-message .response {
+        color: #666;
+      }
+      .input-group {
+        margin-bottom: 20px;
+      }
+      .response{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-header">
+        <h2>DOJ Information Assistant</h2>
+      </div>
+      <div class="chat-messages">
+        {% if response %}
+        <div class="chat-message">
+          <span class="user">You:</span> <h4 style="color: chocolate;">{{ user_in }}</h4>
+        </div>
+        <div class="chat-message">
+          <span class="response">Assistant:</span> <p style="color: green;">{{ response }}</p>
+        </div>
+        {% else %}
+        <div class="chat-message">
+          <span class="response">Assistant:</span> Generating response...
+        </div>
+        {% endif %}
+        <form action="" method="post">
+          <div class="input-group">
+            <input
+              type="text"
+              id="query"
+              name="query"
+              class="form-control"
+              placeholder="Enter your query"
+              required
+            />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
